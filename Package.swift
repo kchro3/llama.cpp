@@ -2,7 +2,6 @@
 
 import PackageDescription
 
-#if arch(arm) || arch(arm64)
 let platforms: [SupportedPlatform]? = [
     .macOS(.v11),
     .iOS(.v11),
@@ -16,12 +15,6 @@ let additionalSettings: [CSetting] = [
     .define("GGML_SWIFT"),
     .define("GGML_USE_METAL")
 ]
-#else
-let platforms: [SupportedPlatform]? = nil
-let exclude: [String] = ["ggml-metal.metal"]
-let additionalSources: [String] = []
-let additionalSettings: [CSetting] = []
-#endif
 
 let package = Package(
     name: "llama",

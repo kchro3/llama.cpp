@@ -19,7 +19,7 @@ let package = Package(
                 "k_quants.c"
             ],
             resources: [
-                .copy("ggml-metal.metal")
+                .copy("metals/ggml-metal.metal")
             ],
             publicHeadersPath: "spm-headers",
             cSettings: [
